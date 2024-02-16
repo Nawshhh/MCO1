@@ -150,6 +150,7 @@ function removeStars() {
 
 function showLogIn() {
   document.querySelector(".popup-login").style.display = "flex";
+  document.querySelector(".options").style.display = "none";
 }
 
 function closeLogIn() {
@@ -160,10 +161,13 @@ function closeLogIn() {
 
   let password = document.getElementById("password");
   password.value = '';
+
+  document.querySelector(".options").style.display = "block";
 }
 
 function showSignup() {
   document.querySelector(".popup-signup").style.display = "flex";
+  document.querySelector(".options").style.display = "none";
 }
 
 function closeSignup() {
@@ -177,6 +181,8 @@ function closeSignup() {
 
   let v_password = document.getElementById("verify-password-signup");
   v_password.value = '';
+
+  document.querySelector(".options").style.display = "block";
 }
 
 function verifyPassword(){
