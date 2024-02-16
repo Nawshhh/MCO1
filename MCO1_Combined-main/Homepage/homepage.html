@@ -18,21 +18,33 @@
   <body>
     <script src="hp-script.js"></script>
     <header class="top-header">
-      <img src="LOGO-YL.png" alt="eggy-logo" id="eggy-logo" />
+      <img src="LOGO-WT.png" alt="eggy-logo" id="eggy-logo" />
       <div class="header-options">
-        <h2 class="opt-titles">Home</h2>
-        <h2 class="opt-titles">Explore</h2>
-        <h2 class="opt-titles">Search</h2>
+        <h2 class="opt-titles-curr">Home</h2>
+        <a href="/view_establishment/view_establishments.html">
+          <h2 class="opt-titles">Explore</h2>
+        </a>
+        <a href="/search_establishment/search-establishment.html">
+          <h2 class="opt-titles">Search</h2>
+        </a>
       </div>
-
       <div class="top-profile" id="top-profile">
         <img src="profile-pic.jpg" alt="profile-pic" id="profile-pic" />
         <div id="options" class="options">
           <button onclick="showSignup()" id="go-profile">Sign Up</button>
-          <button onclick="showLogIn()"id="logout">Log-in</button>
+          <button onclick="showLogIn()" id="logout">Log-in</button>
         </div>
       </div>
     </header>
+    <div class="banner-container">
+        <img src="egi_lobby.jpeg" alt="None">
+        <div class="catchline-container">
+          <h1 >Dive into Delight:  Exploring and Savoring 
+            EGI Taft Tower’s Food Treasures!</h1>
+          <p>Embark on a tasty journey and discover awesome places to eat! This guide will help you find the perfect spots to satisfy your hunger and make your taste buds really happy. Explore delicious foods that go beyond the ordinary, guiding you to the best places that not only fill your cravings but also make your taste buds super excited. Let this guide be your buddy, helping you find the most delicious spots and turning every meal into a tasty memory!</p>
+        </div>
+    </div>
+    <p class="reviews-title-placeholder">Explore the Hidden Gems of EGI</p>
     <div class="parent-div">
       <div class="left-section">
         <div class="imgdiv">
@@ -52,11 +64,6 @@
           <span class="dot" onclick="currentSlide(4)"></span>
           <span class="dot" onclick="currentSlide(5)"></span>
           <button onclick="next()" id="next-button" class="bold">Next</button>
-          <a href="/view_establishment/view_establishments.html">
-            <button class="establishments-button bold">
-              View Establishments
-            </button>
-          </a>
         </div>
       </div>
       <div class="right-section">
@@ -132,10 +139,21 @@
       >
         <h1 onclick="closeLogIn()" id="close-login" type="submit">x</h1>
         <img src="LOGO-YL.png" alt="None" />
-        <input id="username" type="text" placeholder="Enter Username/Email" required />
-        <input id="password" type="password" placeholder="Enter Password" required />
+        <input
+          id="username"
+          type="text"
+          placeholder="Enter Username/Email"
+          required
+        />
+        <input
+          id="password"
+          type="password"
+          placeholder="Enter Password"
+          required
+        />
         <label>
-          <input type="checkbox" checked="checked" name="remember"> Remember me
+          <input type="checkbox" checked="checked" name="remember" /> Remember
+          me
         </label>
         <button class="login-button bold" type="submit">Log in</button>
       </form>

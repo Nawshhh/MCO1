@@ -30,6 +30,14 @@ body {
 }
 .opt-titles {
   margin-right: 20px;
+  color: black;
+}
+
+.opt-titles-curr {
+  margin-right: 20px;
+  text-decoration: underline; /* Add underline when hovered */
+  text-decoration-color: #ffa800;
+  text-decoration-thickness: 5px;
 }
 .header-options a {
   z-index: 2;
@@ -114,13 +122,16 @@ body {
   border-radius: 50%;
 }
 #establishment-title {
-  align-items: center;
-  align-content: center;
-  margin-left: 6%;
   margin-top: 9%;
+  margin-left: 6%;
   font-size: 30px;
+  width: auto; /* Adjust the width */
+  padding-right: 30%;
   margin-bottom: 0;
   font-family: "Outfit";
+}
+.top-display {
+  display: flex;
 }
 hr {
   height: 2px; /* Adjust the height as needed */
@@ -130,103 +141,137 @@ hr {
   margin-left: 90px;
   width: 88%;
 }
-.first-line {
-  display: flex;
-  height: 50vh;
-  margin-left: 110px;
-  width: 85%;
-  margin-bottom: 5%;
+#search-bar {
+  margin-top: 22%;
+  margin-left: 35%;
+  font-size: 20px;
+  height: 20px; /* Adjust the height as desired */
+  width: 500px;
+  border-radius: 20px; /* Adjust the border radius as desired */
+  padding: 10px; /* Add padding to ensure the rounded corners are visible */
+  border: 2px solid #ffa800; /* Set the border color to yellow */
 }
-.restos {
+
+#search-form {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#search-button {
+  margin-top: 22%;
+  font-size: 18px;
+  margin-left: -10%;
+  border-radius: 20px;
+  border: 2px solid #ffa800;
+  padding: 10px;
+  background-color: #ffa800;
+  color: white;
+  cursor: pointer;
+}
+#search-button:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#button-submit {
+  margin: 0;
+  padding: 0;
+}
+.main-searched-container {
   border: 2px solid #ffa800; /* Added solid border */
   margin: 0;
-  border-radius: 8%;
-  width: 30%;
+  padding: 1%;
+  border-radius: 20px; /* Adjusted border radius to create rounded edges */
+  width: 80%;
   margin-right: 25px;
-  margin-left: 25px;
+  margin-left: 140px;
   box-shadow: 0 1px 9px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: transform 0.2s; /* Add transition for smooth effect */
 }
-.restos:hover {
-  transform: translateY(-5px); /* Move button up slightly */
-  color: #ff5300;
+.main-searched {
+  display: flex;
 }
-
 #resto-pic {
-  width: 100%;
-  border-radius: 25px;
+  width: 20%;
+  border-radius: 20px;
   margin: 0;
   bottom: 0;
 }
 #resto-name {
   margin: 0;
-  padding: 0;
-  font-size: 23px;
-  margin-left: 10px;
+  margin-top: 5%;
+  padding: 1%;
+  font-size: 30px;
+  margin-left: 20px;
   width: 200%;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Outfit";
   align-items: center;
   align-content: center;
-}
-.ratings {
-  align-items: center;
-  align-content: center;
-  display: flex;
-  color: #ffa800;
-  font-family: "Outfit";
-  font-weight: 300;
-}
-#main-rating {
-  align-items: center;
-  margin-left: 15%;
-  margin-right: 5px; /* Adjust the value as needed */
-  color: #ffa800;
-  font-family: "Outfit";
-  font-weight: 300;
 }
 .title-bar-box {
-  display: flex;
   margin: 0;
   padding: 0;
-  align-items: center;
-  align-content: center;
-  margin-top: -3%;
+  margin-top: -2%;
+}
+.ratings {
+  display: flex;
+  width: 50%;
 }
 #rate {
   margin: 0;
-  width: 15%;
+  padding-top: 15%;
+  width: auto; /* Allow the browser to determine the width */
+  height: 20px; /* Adjust the height to maintain the aspect ratio */
   padding-left: 9px;
 }
-#out-of {
-  color: #ffa800;
-  font-family: "Outfit";
-  font-weight: 300;
-}
-#overall-rating {
-  margin-left: 5px;
-  color: #ffa800;
-  font-family: "Outfit";
-  font-weight: 300;
-}
-.description {
-  text-align: justify;
-  font-family: "Outfit";
-  font-size: 11px;
-  margin: 0;
-  margin-left: 5%;
-  margin-right: 15px;
-  margin-top: -3%;
-}
+
 .footer {
   background-color: #ffa800;
   color: #fff;
-
   text-align: center;
   padding: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 1499px;
 }
 #footer-text {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.top-part {
+  display: flex;
+}
+
+.star {
+  width: 44px;
+  height: 44px;
+  margin-top: 2%;
+}
+
+.top-part,
+.bottom-part {
+  font-family: "Outfit";
+}
+
+.top-left {
+  font-size: 48px;
+  font-weight: bold;
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-right: 50%;
+}
+
+.top-right {
+  font-size: 38px;
+  color: #ffa800;
+  margin-top: 2%;
+  margin-right: 1.5%;
+}
+
+.bottom-part-container {
+  margin-left: 2%;
+}
+
+.bottom-part {
+  font-weight: light;
 }
